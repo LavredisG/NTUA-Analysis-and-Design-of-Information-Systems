@@ -13,8 +13,9 @@ your machine.
   <li><a href="https://go.dev/doc/install"> Golang (v.1.21.6) </a></li>
 </ul>
 
+## Setup
 
-## 1. Download and Install tools and databases
+### 1. Download and Install tools and databases
 ```bash
 # Update your system
 sudo apt-get update
@@ -47,7 +48,7 @@ wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
 ```
 
-## 2. Set environment variables for Go workspace
+### 2. Set environment variables for Go workspace
 ```bash
 # Go binaries, source files etc are located in /usr/local/go
 # Set these environment variables in ~/.bashrc
@@ -58,7 +59,17 @@ echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 source ~/.bashrc
 ```
 Your Go workspace should now be set up and look like this:
+(the repo that we will work in *(TSBS)* will be cloned where project1 is, under src)
 
+![Go workspace](Go_workspace.PNG)
+
+### 3. Clone TSBS suite
+```bash
+cd $GOPATH/src
+git clone https://github.com/timescale/tsbs.git
+cd tsbs
+make
+```
 
 
 
