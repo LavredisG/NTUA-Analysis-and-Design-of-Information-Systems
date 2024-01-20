@@ -13,7 +13,7 @@ your machine.
   <li><a href="https://go.dev/doc/install"> Golang (v.1.21.6) </a></li>
 </ul>
 
-## Setup
+## Installation and Setup
 
 ### 1. Download and Install tools and databases
 ```bash
@@ -65,11 +65,27 @@ Your Go workspace should now be set up and look like this:
 
 ### 3. Clone TSBS suite
 ```bash
+# Create a dir named 'src' under $GOPATH
+# where we will store our repo
+mkdir $GOPATH/src
 cd $GOPATH/src
+
+# Clone the TSBS repo and build it in the src we created
 git clone https://github.com/timescale/tsbs.git
 cd tsbs
 make
 ```
+## Data generation and loading to the DBs
+
+We used TSBS for the data generation and
+loading. More specifically:
+
+<ul>
+  <li> Create 6 databases, 3 Influx DBs and 3 Timescale DBs, named small, medium and big, 1 for each DB. </li>
+  <li> Generate 6 datasets to populate them. These datasets consist of a small, medium and big file for each of the databases, sized at few hundred MBs, few GBs and more GBs than the main memory of our machine (8GB in our case). In order to minimize the space they take, we create them in zipped form. </li>
+</ul>
+
+
 
 
 
