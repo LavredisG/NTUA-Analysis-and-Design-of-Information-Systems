@@ -82,7 +82,7 @@ loading. More specifically:
 
 <ul>
   <li> Create 6 databases, 3 Influx DBs and 3 Timescale DBs, named small, medium and big, 1 for each DB. </li>
-  <li> Generate 6 datasets to populate them. These datasets consist of a small, medium and big file for each of the databases, sized at few hundred MBs, few GBs and more GBs than the main memory of our machine (8GB in our case). In order to minimize the space they take, we create them in zipped form. </li>
+  <li> Generate 6 datasets to populate them. These datasets include a small, medium and big one in the appropriate for each DB format, sized at few hundred MBs, few GBs and lastly more GBs than the main memory of our machine (8GB in our case) respectively. In order to minimize the space they take, we create them in zipped form. In order to do this, we use the scripts provided by the TSBS. They can be found in our repo under 'scripts/generate_datasets'. </li>
 </ul>
 
 
