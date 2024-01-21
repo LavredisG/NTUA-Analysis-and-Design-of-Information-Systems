@@ -1,5 +1,7 @@
 # NTUA-Analysis-and-Design-of-Information-Systems
-This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our investigation in PNG form. Since it uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.
+This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our investigation in PNG form. 
+
+<i><b>Important notice:</b> Since it uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.</i>
 
 The following instructions set up the project in
 Ubuntu 16.04 machines. If that's not the case for you, links
@@ -115,6 +117,14 @@ cd generate_queries
 cd ..
 ls queries/influx_big
 ```
+
+This will create 15 zipped files, 1 for each query type, containing 1000 queries each, 
+to be used for the influx big database. For more info on the flags used, you can
+take a look at the corresponding section of TSBS as mentioned earlier.
+
+## 4. Measurement and visualization of relevant performance metrics 
+
+At this
 
 
 
