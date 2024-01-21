@@ -1,8 +1,8 @@
 # NTUA-Analysis-and-Design-of-Information-Systems
-This is a repo for the "Analsysis and Design of Information Systems" Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB.
+This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our investigation in PNG form. Since it uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.
 
 The following instructions set up the project in
-Ubuntu 16.04 machines. If that's not the case, links
+Ubuntu 16.04 machines. If that's not the case for you, links
 for the respective guides are provided below to support
 your machine.
 
@@ -14,18 +14,17 @@ your machine.
 </ul>
 
 ## Repo Structure
-### scripts folder:
-Every folder under the scripts folder is to be placed in the tsbs root directory
-of the suite that we clone (described later in the steps).
+### <i>scripts:</i>
+Every folder contained here has to be placed in the tsbs root directory
+of the repo that we'll clone (described later in the steps).
 
-### Metrics comparison
-PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the metrics_visualizer.py script,
-which reads data from the influx.py and timescale.py to visualize them in way that compares the 2 DBs.
+### <i>Metrics comparison</i>
+PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> to visualize them.
 
 
-## Installation and Setup
+##  1.Installation and Setup
 
-### 1. Download and Install tools and databases
+### Download and Install tools and databases
 ```bash
 # Update your system
 sudo apt-get update
@@ -58,7 +57,7 @@ wget https://golang.org/dl/go1.21.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
 ```
 
-### 2. Set environment variables for Go workspace
+### Set environment variables for Go workspace
 ```bash
 # Go binaries, source files etc are located in /usr/local/go
 # Set these environment variables in ~/.bashrc
@@ -73,7 +72,7 @@ Your Go workspace should now be set up and look like this:
 
 ![Go workspace](Go_workspace.PNG)
 
-### 3. Clone TSBS suite
+### Clone TSBS repo
 ```bash
 # Create a dir named 'src' under $GOPATH
 # where we will store our repo
@@ -85,20 +84,28 @@ git clone https://github.com/timescale/tsbs.git
 cd tsbs
 make
 ```
-## Data generation and loading to the DBs
+## 2.Data generation and loading to the DBs
 
 We used TSBS for the data generation and
 loading. More specifically:
 
 <ul>
-  <li> Create 6 databases following the official documentation, 3 Influx DBs and 3 Timescale DBs, named small, medium and big, 1 for each DB. </li>
-  <li> In the tsbs repo we previously cloned, create a directory named 'datasets', in which datasets will be stored. </li>
-  <li> Right after, we run the </li>
-</ul>
+  <li> Create 6 databases, 3 Influx DBs and 3 Timescale DBs, named small, medium and big, 1 for each DB. </li>
+  <li> In the tsbs repo we previously cloned and under the root directory, create a directory named <code>datasets</code>, in which datasets will be stored. </li>
+  <li> Right after, we run the <code>generate_data.sh</code>, which creates the 6 datasets using the <code>tsbs_generate_data</code> command, in a zipped form, and stores them under the directory we previously created.</li>
+</ul> 
 
 ```bash
 mkdir datasets
+# uncomment the next line if you don't have
+# execution permission on the script 
+# chmod +x generate_data.sh
+./generate_data.sh
 ```
+
+
+
+
   
 
 
