@@ -22,7 +22,7 @@ of the repo that we'll clone (described later in the steps).
 PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> to visualize them.
 
 
-##  1.Installation and Setup
+##  1. Installation and Setup
 
 ### Download and Install tools and databases
 ```bash
@@ -84,7 +84,7 @@ git clone https://github.com/timescale/tsbs.git
 cd tsbs
 make
 ```
-## 2.Data generation and loading to the DBs
+## 2. Data generation and loading to the DBs
 
 We used TSBS for the data generation and
 loading. More specifically:
@@ -103,6 +103,18 @@ mkdir datasets
 ./generate_data.sh
 ```
 
+## 3. Query generation
+
+For this step, we execute each script inside the <code>generate_queries</code> folder.
+Results are stored in a zipped form inside the <code>queries</code> folder. For example, in
+order to create and then view the zipped files in the <code>queries/influx_big</code> folder:
+
+```bash
+cd generate_queries
+./influx_big.sh
+cd ..
+ls queries/influx_big
+```
 
 
 
