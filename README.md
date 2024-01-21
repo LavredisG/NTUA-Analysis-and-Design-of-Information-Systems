@@ -13,6 +13,16 @@ your machine.
   <li><a href="https://go.dev/doc/install"> Golang (v.1.21.6) </a></li>
 </ul>
 
+## Repo Structure
+### scripts folder:
+Every folder under the scripts folder is to be placed in the tsbs root directory
+of the suite that we clone (described later in the steps).
+
+### Metrics comparison
+PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the metrics_visualizer.py script,
+which reads data from the influx.py and timescale.py to visualize them in way that compares the 2 DBs.
+
+
 ## Installation and Setup
 
 ### 1. Download and Install tools and databases
