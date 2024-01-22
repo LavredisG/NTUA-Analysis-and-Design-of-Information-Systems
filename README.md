@@ -124,7 +124,25 @@ take a look at the corresponding section of TSBS as mentioned earlier.
 
 ## 4. Measurement and visualization of relevant performance metrics 
 
-At this
+At this point, we have generated and stored the queries that will be executed.
+So the next step is execution. Following the same logic as before, we move to the
+run_queries folder, where we are faced with 2 folders <code>run_influx</code> and
+<code>run_timescale</code>. Since the logic is similar, let's say that we get in the
+influx folder. We are then faced with scripts named <code>run_influx_small/medium_big/1/2/4</code>,
+denoting the base that the queries will be run against and the number of workers to be used.
+For example, if we want to query the influx big database using 4 workers, we follow this flow:
+
+```bash
+cd run_queries
+cd run_influx
+./run_influx_big4.sh
+```
+
+The steps mentioned (data loading, query generation, query execution) produce metrics
+that we store in the <code>influx.py</code> and <code>timescale.py</code> respectively.
+Each of these files contains a small description about the format of its data. The 
+<code>metrics_visualiser.py</code> then uses these data in order to visualize the data,
+so that results can be easily inferred.
 
 
 
