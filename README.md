@@ -128,7 +128,7 @@ At this point, we have generated and stored the queries that will be executed.
 So the next step is execution. Following the same logic as before, we move to the
 run_queries folder, where we are faced with 2 folders <code>run_influx</code> and
 <code>run_timescale</code>. Since the logic is similar, let's say that we get in the
-influx folder. We are then faced with scripts named <code>run_influx_small/medium_big/1/2/4</code>,
+influx folder. We are then faced with scripts named <code>run_influx_small/medium/big_1/2/4</code>,
 denoting the base that the queries will be run against and the number of workers to be used.
 For example, if we want to query the influx big database using 4 workers, we follow this flow:
 
