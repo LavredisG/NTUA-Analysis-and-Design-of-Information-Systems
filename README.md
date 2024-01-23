@@ -1,7 +1,7 @@
 # NTUA-Analysis-and-Design-of-Information-Systems
 This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our investigation in PNG form. 
 
-<i><b>Important notice:</b> Since it uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.</i>
+<i><b>Important notice:</b> Since this repo uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.</i>
 
 The following instructions set up the project in
 Ubuntu 16.04 machines. If that's not the case for you, links
@@ -16,11 +16,11 @@ your machine.
 </ul>
 
 ## Repo Structure
-### <i>scripts:</i>
+### <i><code>scripts:</code></i>
 Every folder contained here has to be placed in the tsbs root directory
 of the repo that we'll clone (described later in the steps).
 
-### <i>Metrics comparison</i>
+### <i><code>Metrics_Comparison:</code></i>
 PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> to visualize them.
 
 
