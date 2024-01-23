@@ -144,6 +144,10 @@ Each of these files contains a small description about the format of its data. T
 <code>metrics_visualiser.py</code> then uses these data in order to visualize them,
 so that results can be easily inferred.
 
+It's also worth mentioning that each execution of the queries, is following the 
+<code>time</code> command (/usr/bin/time). In this way we can get more useful metrics
+than those provided by the suite.
+
 
 
   
