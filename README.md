@@ -105,6 +105,8 @@ mkdir datasets
 ./generate_data.sh
 ```
 
+As for the data loading, since
+
 ## 3. Query generation
 
 For this step, we execute each script inside the <code>generate_queries</code> folder.
