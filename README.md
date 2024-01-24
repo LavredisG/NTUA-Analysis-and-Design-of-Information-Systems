@@ -1,5 +1,5 @@
 # NTUA-Analysis-and-Design-of-Information-Systems
-This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB on the <devops> use case. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our research in PNG form. 
+This is a repo for the <code>Analysis and Design of Information Systems</code> Project (2023-2024), which compares 2 timeseries databases, InfluxDB and TimescaleDB on the <code>devops</code> use case. It contains instructions to set the environment up, scripts to automate the execution of commands in order to avoid repetitive work and the results of our research in PNG form. 
 
 <i><b>Important notice:</b> Since this repo uses the commands provided by <a href="https://github.com/timescale/tsbs">TSBS</a>, readers should first read that README, before proceeding here for a better understating of the commands and the environment we set.</i>
 
