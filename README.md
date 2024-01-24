@@ -105,7 +105,14 @@ mkdir datasets
 ./generate_data.sh
 ```
 
-As for the data loading, since
+As for the data loading, since it's a process that could cause
+problems to our machines due to storage limitations if done on bulk, there are no
+scripts, so you have to follow them as is from the source documentation.
+We provide a few of them for examples:
+
+```bash
+```
+
 
 ## 3. Query generation
 
