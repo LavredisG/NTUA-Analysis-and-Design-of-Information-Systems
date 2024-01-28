@@ -21,7 +21,7 @@ Every folder contained here has to be placed in the tsbs root directory
 of the repo that we'll clone (described later in the steps).
 
 ### <i><code>Metrics_Comparison:</code></i>
-PNG files of the metrics compared in this project in addition to the python scripts used to create them. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> to visualize them.
+PNG files of the metrics compared in this project. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> - all of them located under <code>Visualizer_Scripts</code> - to visualize them. In addition to these, <code>influx_storage.py</code> and <code>timescale_storage.py</code> are used to create InfluxDB_storage.png and TimescaleDB_storage.png respectively.
 
 
 ##  1. Installation and Setup
@@ -116,6 +116,22 @@ cat ./datasets/timescale_big.gz | gunzip | tsbs_load_timescaledb --host="localho
 
 # Load the influx_big dataset to the "big" influx db using 8 workers
 cat ./datasets/influx_big.gz | gunzip | tsbs_load_influx --workers=8 --do-create-db=false --do-abort-on-exist=false --db-name="big"
+```
+
+Regarding the measurement of the storage each DB occupies, we execute the following:
+
+- For Timescale databases:
+```bash
+# Print the space used by medium timescale database
+sudo -su postgres psql
+\c medium
+SELECT pg_size_pretty(pg_database_size(current_database()));
+```
+
+- For Influx databases:
+```bash
+# Print the space used by big influx database
+  du -sh /var/lib/infludb/data/big
 ```
 
 
