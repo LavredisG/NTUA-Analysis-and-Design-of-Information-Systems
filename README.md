@@ -23,6 +23,8 @@ of the repo that we'll clone (described later in the steps).
 ### <i><code>Metrics_Comparison:</code></i>
 PNG files of the metrics compared in this project. These were created using the <code>metrics_visualizer.py</code> script, which reads data from the <code>influx.py</code> and <code>timescale.py</code> - all of them located under <code>Visualizer_Scripts</code> - to visualize them. In addition to these, <code>influx_storage.py</code> and <code>timescale_storage.py</code> are used to create InfluxDB_storage.png and TimescaleDB_storage.png respectively.
 
+### <i><code>Reports:</code></i>
+PDF files containing the final report and the data we based our results on.
 
 ##  1. Installation and Setup
 
